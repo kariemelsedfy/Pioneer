@@ -13,7 +13,7 @@ d_1 = lambda_removed/(4*n_1)
 d_2 = lambda_removed/(4*n_2)
 # the P matrix for the first type of glass
 
-for lambdas in range(300, 800):
+for lambdas in range(370, 700):
     phi_1 = n_1 * ((2 * pi) / lambdas) * d_1
     A_1 = np.exp((-1j * phi_1))
     D_1 = np.exp((1j * phi_1))
@@ -69,7 +69,7 @@ for lambdas in range(300, 800):
     def T2(c):
         return T
     c = c + 1
-    plt.plot(lambdas, T2(c), 'b.')
+    plt.plot(lambdas, T, 'b.')
     width = [450]
     if T < 0.5:
         width.append(lambdas)
